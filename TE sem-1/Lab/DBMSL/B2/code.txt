@@ -1,0 +1,110 @@
+
+> use b2
+switched to db b2
+> db.student.insert({rollno : 201 , subject : "Physics" , marks : 40 })
+WriteResult({ "nInserted" : 1 })
+> db.student.insertMany([
+... { rollno : 202 , subject : "Physics" , marks : 44 } ,
+... { rollno : 201 , subject : "Chemistry" , marks : 40 } ,
+... { rollno : 202 , subject : "Chemistry" , marks : 38 } ,
+... { rollno : 201 , subject : "Math" , marks : 92 } ,
+... { rollno : 202 , subject : "Math" , marks : 88 } ,
+... { rollno : 203 , subject : "Physics" ,marks : 45 } ,
+... { rollno : 203 , subject : "Chemistry" , marks :41 } ,
+... { rollno : 203 , subject : "Math" , marks : 94 } ,
+... { rollno : 204 , subject : "Physics" , marks : 32 } ,
+... { rollno : 204 , subject : "Chemistry" , marks : 40 } ] )
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("5fa7eb298e612b224bb37dcf"),
+                ObjectId("5fa7eb298e612b224bb37dd0"),
+                ObjectId("5fa7eb298e612b224bb37dd1"),
+                ObjectId("5fa7eb298e612b224bb37dd2"),
+                ObjectId("5fa7eb298e612b224bb37dd3"),
+                ObjectId("5fa7eb298e612b224bb37dd4"),
+                ObjectId("5fa7eb298e612b224bb37dd5"),
+                ObjectId("5fa7eb298e612b224bb37dd6"),
+                ObjectId("5fa7eb298e612b224bb37dd7"),
+                ObjectId("5fa7eb298e612b224bb37dd8")
+        ]
+}
+>
+>
+> var mapFunction = function(){
+... var key = this.rollno ;
+... var value = { total_marks : this.marks , count : 1 , percentage : 0};
+... emit (key,value);
+... };
+>
+>
+> var reduceFunction = function(key , values ) {
+... var reducedObject = { total_marks : 0 ,count : 0 ,percentage : 0 } ;
+... values.forEach( function(value) {
+...     reducedObject.total_marks += value.total_marks;
+...     reducedObject.count += value.count ;
+... });
+...
+... return reducedObject ;
+... };
+>
+>
+> var finalizeFunction = function ( key,reducedValue ) {
+...
+... if(reducedValue.count > 0 )
+...    reducedValue.percentage = reducedValue.total_marks / reducedValue.count ;
+...
+... return reducedValue;
+... };
+>
+>
+>
+>
+> db.student.mapReduce(    mapFunction ,   reduceFunction ,   {     out : "result",     finalize : finalizeFunction    } )
+{
+        "result" : "result",
+        "timeMillis" : 172,
+        "counts" : {
+                "input" : 11,
+                "emit" : 11,
+                "reduce" : 4,
+                "output" : 4
+        },
+        "ok" : 1
+}
+>
+>
+> db.result.find({}).pretty()
+{
+        "_id" : 201,
+        "value" : {
+                "total_marks" : 172,
+                "count" : 3,
+                "percentage" : 57.333333333333336
+        }
+}
+{
+        "_id" : 202,
+        "value" : {
+                "total_marks" : 170,
+                "count" : 3,
+                "percentage" : 56.666666666666664
+        }
+}
+{
+        "_id" : 203,
+        "value" : {
+                "total_marks" : 180,
+                "count" : 3,
+                "percentage" : 60
+        }
+}
+{
+        "_id" : 204,
+        "value" : {
+                "total_marks" : 72,
+                "count" : 2,
+                "percentage" : 36
+        }
+}
+>

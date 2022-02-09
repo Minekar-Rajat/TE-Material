@@ -1,0 +1,101 @@
+import org.json.JSONArray;
+import java.util.*; 
+
+import org.json.simple.JSONObject;
+
+public class EncodeObj {
+
+	public static void main(String[] args) {
+		
+		try {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("Enter a Employee ID :");
+			int id=sc.nextInt();
+			
+			System.out.println("Enter a Name :");
+			String name =sc.next();
+			
+			System.out.println("Enter a Salary :");
+			double sal=sc.nextDouble();
+			
+		
+			
+			System.out.println("Enter a City :");
+			String city =sc.next();
+			
+			System.out.println("Enter a state :");
+			String state =sc.next();
+			
+			System.out.println("Enter a Country :");
+			String country =sc.next();
+			
+			
+			JSONObject obj = new JSONObject();
+	        obj.put("Emp_id", new Integer(id));
+	        obj.put("Emp_name",name);
+	        obj.put("Salary",new Double(sal));
+	        
+	       
+	        
+	        JSONObject address=new JSONObject();
+	        address.put("city",city);
+	        address.put("State",state);
+	        address.put("Country",country);
+	        
+	        obj.put("address",address);
+	        
+	        System.out.println(obj.toJSONString());
+	      
+	        int id1=(int) obj.get("Emp_id");
+	        String name1 = (String) obj.get("Emp_name");
+	        double sal1=(double) obj.get("Salary");
+	        String city1 = (String) address.get("city");
+	        String state1 = (String) address.get("State");
+	        String country1 = (String) address.get("Country");
+	        
+	        
+	        
+	        System.out.println();
+	        System.out.println("Emp_id : "+id1);
+	        System.out.println("Emp_name : "+name1);
+			System.out.println("Salary : "+sal1);
+			System.out.println("City : "+city1);
+			System.out.println("state : "+state1);
+			System.out.println("Country : "+country1);
+			
+			
+		}catch(Exception e)
+		{
+			e.printStackTrace(); 	
+		}
+		
+
+	}
+
+}
+
+Output:
+
+Enter a Employee ID :
+101
+Enter a Name :
+Shubham
+Enter a Salary :
+50000
+Enter a City :
+Pune
+Enter a state :
+Maharastra
+Enter a Country :
+India
+{"Emp_id":101,"Salary":50000.0,"address":{"city":"Pune","State":"Maharastra","Country":"India"},"Emp_name":"Shubham"}
+
+Emp_id : 101
+Emp_name : Shubham
+Salary : 50000.0
+City : Pune
+state : Maharastra
+Country : India
+

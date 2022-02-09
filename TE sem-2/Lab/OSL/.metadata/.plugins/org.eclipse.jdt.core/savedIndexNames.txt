@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+D:\TE\TE sem-2\Lab\OSL\.metadata\.plugins\org.eclipse.jdt.core
+3429511202.index
+4249780422.index
+3142721794.index
+1258177164.index
+1870682265.index
+3258482872.index

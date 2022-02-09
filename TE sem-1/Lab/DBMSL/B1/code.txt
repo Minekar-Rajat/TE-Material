@@ -1,0 +1,63 @@
+> show dbs
+admin      0.000GB
+conFusion  0.000GB
+config     0.000GB
+local      0.000GB
+> use student
+switched to db student
+> db
+student
+> db.data.insert({ _id : 1 , "name" : "Sunveg" , "class" : "TE" })
+WriteResult({ "nInserted" : 1 })
+> db.data.insert({ _id : 2 , "name" : "Jaypal" , "class" : "TE" })
+WriteResult({ "nInserted" : 1 })
+> db.data.insert({ _id : 3 , "name" : "Pritesh" , "class" : "TE" })
+WriteResult({ "nInserted" : 1 })
+> db.data.insert({ _id : 4 , "name" : "Mohit" , "class" : "TE" })
+WriteResult({ "nInserted" : 1 })
+> db.data.insert({ _id : 5 , "name" : "Rajat" , "class" : "TE" })
+WriteResult({ "nInserted" : 1 })
+>
+> db.data.find()
+{ "_id" : 1, "name" : "Sunveg", "class" : "TE" }
+{ "_id" : 2, "name" : "Jaypal", "class" : "TE" }
+{ "_id" : 3, "name" : "Pritesh", "class" : "TE" }
+{ "_id" : 4, "name" : "Mohit", "class" : "TE" }
+{ "_id" : 5, "name" : "Rajat", "class" : "TE" }
+> db.data.find({name : {$eq : "Mohit"}})
+{ "_id" : 4, "name" : "Mohit", "class" : "TE" }
+>
+>
+>
+> db.data.update({"name": { $eq : "Mohit"}},{$set : {"class" : "BE"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.data.find().pretty()
+{ "_id" : 1, "name" : "Sunveg", "class" : "TE" }
+{ "_id" : 2, "name" : "Jaypal", "class" : "TE" }
+{ "_id" : 3, "name" : "Pritesh", "class" : "TE" }
+{ "_id" : 4, "name" : "Mohit", "class" : "BE" }
+{ "_id" : 5, "name" : "Rajat", "class" : "TE" }
+>
+> db.data.save({_id : 6 , "name" : "Amar"})
+WriteResult({ "nMatched" : 0, "nUpserted" : 1, "nModified" : 0, "_id" : 6 })
+> db.data.save({_id:6,"name":"Amar","class":"SE"})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+>
+> db.data.find().pretty()
+{ "_id" : 1, "name" : "Sunveg", "class" : "TE" }
+{ "_id" : 2, "name" : "Jaypal", "class" : "TE" }
+{ "_id" : 3, "name" : "Pritesh", "class" : "TE" }
+{ "_id" : 4, "name" : "Mohit", "class" : "BE" }
+{ "_id" : 5, "name" : "Rajat", "class" : "TE" }
+{ "_id" : 6, "name" : "Amar", "class" : "SE" }
+>
+>
+> db.data.remove({"class":"SE"})
+WriteResult({ "nRemoved" : 1 })
+> db.data.find().pretty()
+{ "_id" : 1, "name" : "Sunveg", "class" : "TE" }
+{ "_id" : 2, "name" : "Jaypal", "class" : "TE" }
+{ "_id" : 3, "name" : "Pritesh", "class" : "TE" }
+{ "_id" : 4, "name" : "Mohit", "class" : "BE" }
+{ "_id" : 5, "name" : "Rajat", "class" : "TE" }
+>

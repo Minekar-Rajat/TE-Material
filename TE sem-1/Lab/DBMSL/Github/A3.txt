@@ -1,0 +1,24 @@
+1. select * from customer where cust_addr = "Pune,India" or cust_addr = "Kolhapur,India" ;
+
+2. select * from customer where cust_fname like "p%" or cust_fname like "h%";
+
+3. select distinct(cust_addr) from customer;
+
+4. update book set unit_price = (unit_price + unit_price*0.05) where pub_year = 2015 ;
+
+5. delete from customer where cust_addr = "Pune,India";
+
+6. select author_name from author where country = "India" or country = "Australia";
+
+7. select * from publisher where year = 2015 or year = 2016 ;
+
+8. select * from book where unit_price = (select max(unit_price) from book);
+
+9. select title from book where unit_price between 300 and 400;
+
+10.select title,author_no,publisher_no from book where pub_year = 2000 or pub_year = 2004 or pub_year = 2006;
+
+
+
+
+

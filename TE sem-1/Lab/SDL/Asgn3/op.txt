@@ -1,0 +1,286 @@
+Server 
+
+ -- Server started
+ -- Waiting for a client ...
+ Client 1 accepted
+ Client 2 accepted
+ Client 3 accepted
+ Client 4 accepted
+ -- Client  :  mohit Signed Up Successfully 
+ -- Client Details : 
+ ------------------------------
+	Name         :   mohit
+	Expierence   :   2
+	Designation  :   software engineer
+	Contact      :   mohit@gmail.com
+	Salary       :   Rs. 30000.0
+
+------------------------------
+ -- Client :  mohit , Just Logged In
+----------------------
+Server  :   Welcome to Admin service 
+Client  :   I had issues
+Server    :   I will resolve
+Client  :   Over
+ -- Client :  Rajat , Just Logged In
+ -- Client :  Rajat , Just Logged In
+ -- Login failure for Pritesh
+ -- Client  :  Pritesh Signed Up Successfully 
+ -- Client Details : 
+ ------------------------------
+	Name         :   Pritesh
+	Expierence   :   2
+	Designation  :   Intern
+	Contact      :   prit@gmail.com
+	Salary       :   Rs. 30000.0
+
+------------------------------
+Closing connection
+ -- Client :  Pritesh , Just Logged In
+Closing connection
+Closing connection
+
+
+Client-1
+
+Client
+Connected
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   2
+
+
+	Enter Name          :   mohit
+
+	Enter Experience    :   2
+
+	Enter Designation   :   software engineer
+
+	Enter Email         :   mohit@gmail.com
+SignUp Successful !
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   1
+
+
+	Enter Name  :   mohit
+Login Successful !
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   1
+------------------------------
+	Name         :   mohit
+	Expierence   :   2
+	Designation  :   software engineer
+	Contact      :   mohit@gmail.com
+	Salary       :   Rs. 30000.0
+
+------------------------------
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   3
+No Projects Available !
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   2
+
+	--------------------------
+Server  :   Welcome to Admin service 
+Client  :   I had issues
+Server  :   I will resolve
+Client  :   Over
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   0
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   1
+
+
+	Enter Name  :   Rajat
+Login Successful !
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   0
+
+client-2
+
+Client
+Connected
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   1
+
+
+	Enter Name  :   Rajat
+Login Successful !
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   1
+------------------------------
+	Name         :   Rajat
+	Expierence   :   13
+	Designation  :   software enginner
+	Contact      :   rajat@gmail.com
+	Salary       :   Rs. 50000.0
+
+------------------------------
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   3
+No Projects Available !
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   0
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   0
+
+
+client-3
+
+Client
+Connected
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   1
+
+
+	Enter Name  :   Pritesh
+Login Failed !
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   2
+
+
+	Enter Name          :   Pritesh
+
+	Enter Experience    :   2
+
+	Enter Designation   :   Intern
+
+	Enter Email         :   prit@gmail.com
+SignUp Successful !
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   0
+
+client -4
+
+run:
+Client
+Connected
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   1
+
+
+	Enter Name  :   Pritesh
+Login Successful !
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   1
+------------------------------
+	Name         :   Pritesh
+	Expierence   :   2
+	Designation  :   Intern
+	Contact      :   prit@gmail.com
+	Salary       :   Rs. 30000.0
+
+------------------------------
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   0
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   0

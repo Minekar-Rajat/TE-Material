@@ -1,0 +1,384 @@
+//Server output
+
+run:
+ -- Server started
+ -- Waiting for a client ...
+ -- Client accepted
+ -- Client  :  rajat Signed Up Successfully 
+ -- Client Details : 
+
+------------------------------
+	Name         :   rajat
+	Expierence   :   7
+	Designation  :   software engineer
+	Contact      :   rajat@g.com
+	Salary       :   Rs. 50000.0
+
+------------------------------
+ -- Client  :  mohit Signed Up Successfully 
+ -- Client Details : 
+
+------------------------------
+	Name         :   mohit
+	Expierence   :   4
+	Designation  :   jr.software engineer
+	Contact      :   mohit@g.com
+	Salary       :   Rs. 30000.0
+
+------------------------------
+ -- Client  :  pritesh Signed Up Successfully 
+ -- Client Details : 
+
+------------------------------
+	Name         :   pritesh
+	Expierence   :   1
+	Designation  :   jr.software engineer
+	Contact      :   pritesh@g.com
+	Salary       :   Rs. 30000.0
+
+------------------------------
+ -- Client :  rajat , Just Logged In
+----------------------
+Server  :   Welcome to Admin service 
+Client  :   I had issues
+Server    :   I will resolve them
+Client  :   Over
+ -- Client :  rajat , Just Logged In
+ -- Client :  mohit , Just Logged In
+ -- Client :  mohit , Just Logged In
+Closing connection
+
+
+// Client output
+
+run:
+Client
+Connected
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   2
+
+
+	Enter Name          :   rajat
+
+	Enter Experience    :   7
+
+	Enter Designation   :   software engineer
+
+	Enter Email         :   rajat@g.com
+SignUp Successful !
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   2
+
+
+	Enter Name          :   mohit
+
+	Enter Experience    :   4
+
+	Enter Designation   :   jr.software engineer
+
+	Enter Email         :   mohit@g.com
+SignUp Successful !
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   2
+
+
+	Enter Name          :   pritesh
+
+	Enter Experience    :   1
+
+	Enter Designation   :   jr.software engineer
+
+	Enter Email         :   pritesh@g.com
+SignUp Successful !
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   1
+
+
+	Enter Name  :   rajat
+Login Successful !
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   1
+------------------------------
+	Name         :   rajat
+	Expierence   :   7
+	Designation  :   software engineer
+	Contact      :   rajat@g.com
+	Salary       :   Rs. 50000.0
+
+------------------------------
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   2
+
+	--------------------------
+Server  :   Welcome to Admin service 
+Client  :   I had issues
+Server  :   I will resolve them
+Client  :   Over
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   3
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   0
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   3
+
+	------ Employee Manager Section -------
+
+	Enter UserName  :   admin
+
+
+	1.Create Project 
+	2.Remove Employee 
+	3.Delete Project
+	0.Exit
+
+	Enter your choice   :   1
+
+	Enter Task Name  :   web app
+
+	Enter Project Task Details   :   build a web app
+
+
+	Enter Deadline    :   
+
+		Day :   30
+
+		Month :   9
+
+		Year  :   2020
+
+	Enter Employee Name :   rajat
+
+	Project Created Successfully !
+
+
+	1.Create Project 
+	2.Remove Employee 
+	3.Delete Project
+	0.Exit
+
+	Enter your choice   :   1
+
+	Enter Task Name  :   ML app
+
+	Enter Project Task Details   :   build a ML app
+
+
+	Enter Deadline    :   
+
+		Day :   30
+
+		Month :   10
+
+		Year  :   2020
+
+	Enter Employee Name :   mohit
+
+	Project Created Successfully !
+
+
+	1.Create Project 
+	2.Remove Employee 
+	3.Delete Project
+	0.Exit
+
+	Enter your choice   :   2
+
+	Enter Employee Name :   pritesh
+
+	Employee Removed !
+
+
+	1.Create Project 
+	2.Remove Employee 
+	3.Delete Project
+	0.Exit
+
+	Enter your choice   :   0
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   1
+
+
+	Enter Name  :   rajat
+Login Successful !
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   3
+
+
+	Employee  :   rajat
+	--------------------------------
+
+	Project Task Name   :   web app
+
+	Project Task Detail :   build a web app
+
+	Project Deadline    :   30/9/2020
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   0
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   1
+
+
+	Enter Name  :   mohit
+Login Successful !
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   3
+
+
+	Employee  :   mohit
+	--------------------------------
+
+	Project Task Name   :   ML app
+
+	Project Task Detail :   build a ML app
+
+	Project Deadline    :   30/10/2020
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   0
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   3
+
+	------ Employee Manager Section -------
+
+	Enter UserName  :   admin
+
+
+	1.Create Project 
+	2.Remove Employee 
+	3.Delete Project
+	0.Exit
+
+	Enter your choice   :   3
+
+	Enter Employee Name :   mohit
+
+	Project Deleted !
+
+
+	1.Create Project 
+	2.Remove Employee 
+	3.Delete Project
+	0.Exit
+
+	Enter your choice   :   0
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   1
+
+
+	Enter Name  :   mohit
+Login Successful !
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   3
+
+
+	1.Profile 
+	2.Help 
+	3.Projects 
+	0.LogOut
+Enter Your Choice   :   0
+
+
+	1.Login 
+	2.SignUp 
+	3.Employee Manager 
+	0.Exit
+
+	Enter Your Choice   :   0

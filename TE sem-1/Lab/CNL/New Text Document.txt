@@ -1,0 +1,28 @@
+Q)Given IP address and bits reserved for network id and number of 
+subnets,Find the address of hosts under each subnet. 
+	
+Steps: 
+
+1.Take input for the Network address, bits reserved for network 
+ID and number of subnets . 
+
+2.Find Network Mask from the given bits and assign remaining bits 
+as zero. 
+
+3.Then borrow the bits from this network mask for using them in 
+finding subnet Ids. 
+
+4.If n subnets are given then borrow m bits such that 2^m = n. 
+
+5.Find all the combinations of the borrowed bits and assign them 
+with Network address. 
+
+6.From this you will get all the possible subnet addresses. 
+
+7.You can find the sunbet mask by making all the borrowed bits 1 
+in the network mask. 
+
+8.Take any two addresses as input from the given set of subnet 
+address from the user. 
+
+9.Then output whether those are reachable or not.

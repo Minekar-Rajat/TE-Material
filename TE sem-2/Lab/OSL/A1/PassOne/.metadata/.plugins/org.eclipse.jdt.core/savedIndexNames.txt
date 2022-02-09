@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\TE\TE sem-2\Lab\OSL\A1\PassOne\.metadata\.plugins\org.eclipse.jdt.core
+1258177164.index
+3429511202.index
+3258482872.index

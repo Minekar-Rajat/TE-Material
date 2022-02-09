@@ -1,0 +1,24 @@
+Technique used to reduce size of data is known as Data Compression. It is the technique used to represent data in smaller size than actual size of data by encoding it in less bits. Compression is basically technology used to represent data without reduction in quality but reduction in quantity of data. In order to store and transmit the data efficiently, compression technique came into picture. There are various techniques for data compression like lossy compression and lossless compression. This seminar proposes to analyze those compression algorithms and to study them comparatively. It also includes various compression on different types of data.  
+
+The internet is huge network where communication is being done by flow of data. Now these days due to evolution in technology, a lot of amount of data is getting generated each day. Internet is getting used by billons of people and handling such increasing amount of data is a big thing. Also internet is not only concerned with data but also concerned with the speed. To fulfill these demands, the flow of data need to be fast. Speed of flow increase with reduction in size of data without reducing quality, where data compression comes into picture.
+	      The approximate size of data all over the globe by 2020 is about 40+ zettabyte (ZB) where 1 zettabyte is 2^70 bytes. Storage, manipulation and flow of such amount of data over a huge network must be as efficient as possible, where compression help us to achieve this. Compression is a technique used to represent the data in smaller size than actual size by encoding it into smaller bits. In late 1940s data compression work began. Robert Fano and Claude Shannon found a systematic way to assign codewords, which was based on probabilities of block around 1949. In 1951, David Huffman came up with optimal method for the same. Various compression algorithms are based on different encoding techniques such as Run Length Encoding, Huffman encoding, etc.
+
+
+Popular compression techniques such as 
+LZ77 and Huffman Coding are examples of lossless 
+compression techniques. On the other hand, lossy compression 
+techniques remove the unnecessary bits, reducing the size of 
+the file. The compressed file cannot be converted back to the 
+original file as some part of the information is lost in the 
+compression. The file recovered after decompression is an 
+approximation of the original file, which is reconstructed on 
+basis of the compression program’s understanding. Since a lot 
+of unnecessary information is removed, compression ratio of 
+lossy compression techniques is generally more than lossless 
+compression techniques. Lossy techniques are widely used in image and video compression, where a group of pixels can be 
+approximated into a single value using transform encoding or 
+differential encoding. Compression techniques such as JPEG and MP3 are examples of lossy compression techniques.
+In this work, we focus on comparing various widely used
+modern lossless compression algorithms. The compression 
+algorithms are compared with respect to their compression 
+ratio and their compression and decompression speed

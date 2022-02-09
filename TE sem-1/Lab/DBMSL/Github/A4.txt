@@ -1,0 +1,24 @@
+1. select * from customer natural join orders ;
+
+2. select book.title , author.author_name , author.country from book natural join author;
+
+3. select customer.cust_no , customer.cust_fname,customer.cust_lname , orders.order_no from customer left outer join orders on customer.cust_no = orders.cust_no where orders.cust_no is NULL;
+
+4. select book.title , book.isbn , orders.order_no from book left outer join orders on book.isbn = orders.isbn where orders.order_no is NULL;
+
+5. select cust_fname,title,author_no,year from orders inner join Customer using(cust_no) inner join book using(ISBN) inner join author using(author_no) inner join publisher using(publisher_no) where book.ISBN=1234 order by cust_fname,title;
+
+6. select count(*) from book; select count(*) from customer;
+
+7. select orders.cust_no , orders.order_no , orders.isbn from orders inner join book on orders.isbn = book.isbn where book.title = 'mysql' ;
+
+8. select customer.cust_company from customer inner join orders on orders.cust_no = customer.cust_no where orders.odate like '%2015%';
+
+9. create or replace view newBookView as select book.isbn,book.title,book.unit_price,author.author_name,author.country,book.pub_year from book,author where book.author_no = author.author_no; 
+   select * from newBookView;
+
+10. 1.
+    2. update book_demo_view set unit_price = 450 where title = 'Book 2';
+    3. delete from book_demo_view where title = 'Book 4';
+    4. drop view book_demo_view;
+

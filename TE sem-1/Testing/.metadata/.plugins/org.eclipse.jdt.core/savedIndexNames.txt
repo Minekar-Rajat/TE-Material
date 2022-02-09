@@ -1,0 +1,5 @@
+INDEX VERSION 1.130+D:\TE\TE sem-1\Testing\.metadata\.plugins\org.eclipse.jdt.core
+2250130128.index
+3350569109.index
+2164395548.index
+319992518.index

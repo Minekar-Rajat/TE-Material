@@ -1,0 +1,142 @@
+
+show databases;
+
+create database bookSchema;
+
+show tables;
+
+create table customer( cust_no int NOT NULL primary key ,
+    -> cust_fname varchar(20) NOT NULL ,
+    -> cust_lname varchar(20) NOT NULL ,
+    -> cust_company varchar(30) NOT NULL ,
+    -> cust_addr varchar(40) NOT NULL ,
+    -> city varchar(10) NOT NULL ,
+    -> cust_phone varchar(12) NOT NULL );
+
+
+create table orders( order_no int NOT NULL primary key ,
+    -> cust_no int NOT NULL ,
+    -> isbn int NOT NULL ,
+    -> qty int NOT NULL ,
+    -> odate varchar(15) NOT NULL );
+
+
+create table book( isbn int NOT NULL primary key ,
+    -> title varchar(20) NOT NULL ,
+    -> unit_price int NOT NULL ,
+    -> author_no int NOT NULL ,
+    -> publisher_no int NOT NULL ,
+    -> pub_year varchar(12) NOT NULL );
+
+
+create table author( author_no int NOT NULL primary key ,
+    -> author_name varchar(20) NOT NULL ,
+    -> country varchar(30) NOT NULL );
+
+
+create table publisher( publisher_no int NOT NULL primary key ,
+    -> publisher_name varchar(20) NOT NULL ,
+    -> publisher_addr varchar(30) NOT NULL ,
+    -> year varchar(12) NOT NULL );
+
+
+alter table book
+    -> add foreign key (publisher_no)
+    -> references publisher (publisher_no);
+
+alter table book
+    -> add foreign key (author_no)
+    -> references author (author_no);
+
+alter table orders
+    -> add foreign key (cust_no)
+    -> references customer (cust_no);
+
+alter table orders
+    -> add foreign key (isbn)
+    -> references book (isbn);
+
+
+insert into publisher values(1,"publisher 1","pub_city 1","2020");
+
+insert into publisher values(2,"publisher 2","pub_city 2","2020");
+
+
+
+insert into author values(1,"author 1","India");
+
+insert into author values(2,"author 2","India");
+
+
+
+insert into book values(1,"Book 1",500,1,1,"2020");
+
+insert into book values(2,"Book 2",500,2,2,"2020");
+
+
+
+insert into customer values(1,"Customer 1","cust lname 1","Company 1","Pune,India","9876543210");
+
+insert into customer values(2,"Customer 2","cust lname 2","Company 2","Bengaluru,India","8910111213");
+
+
+
+insert into orders values(1,1,1,1,"13-8-2020");
+
+insert into orders values(2,2,2,2,"10-8-2020");
+
+
+
+select * from publisher;
+
+select * from author;
+
+select * from book;
+
+select * from customer;
+
+select * from orders;
+
+
+
+create view author_view as select author_name , country from author ;
+
+create view book_view as select isbn , title , unit_price , pub_year from book ;
+
+create view customer_view as select cust_fname , cust_lname , cust_addr , cust_phone from customer ;
+
+create view orders_view as select order_no , isbn , qty , odate from orders ;
+
+create view publisher_view as select publisher_name , publisher_addr , year from publisher ;
+
+
+select * from author_view;
+
+select * from book_view;
+
+select * from customer_view;
+
+select * from orders_view;
+
+select * from publisher_view;
+
+create index author_index on author(author_no,author_name);
+
+create index book_index on book(isbn,title);
+
+create index customer_index on customer(cust_no,cust_addr);
+
+create index orders_index on orders(order_no,cust_no,isbn);
+
+create index publisher_index on publisher(publisher_no,publisher_name);
+
+
+show index from author;
+
+show index from book;
+
+show index from customer;
+
+show index from orders;
+
+show index from publisher;

@@ -1,0 +1,56 @@
+show databases;
+
+create database asgn7;
+
+use asgn7;
+
+create table Customer ( cust_id int primary key auto_increment , name varchar(100),
+total_purchase int );
+
+create table Category ( cust_id int primary key auto_increment , name varchar(100),
+class varchar(100));
+
+show tables;
+
+delimiter $$
+create function cust_class( credit int )
+returns varchar (100)
+deterministic
+begin
+DECLARE customerLevel VARCHAR(100);
+
+IF credit > 20000 THEN
+SET customerLevel = 'Not Define';
+ELSEIF (credit >= 10000 AND credit <= 20000 ) THEN
+SET customerLevel = 'PLATINUM';
+ELSEIF (credit >= 5000 AND credit <= 9999 ) THEN
+SET customerLevel = 'GOLD';
+ELSEIF (credit >= 2000 AND credit <= 4999 ) THEN
+SET customerLevel = 'SILVER';
+ELSEIF credit<2000 THEN
+SET customerLevel = 'Not Define';
+END IF;
+--return the customer level
+RETURN(customerLevel);
+END$$
+DELIMITER;
+
+show function status where db='asgn7';
+
+delimiter $$
+create procedure proc_Grade (in cust_name varchar(100),in purchase int)
+begin
+declare class varchar(100);
+insert into Customer (name,total_purchase) values (cust_name,purchase);
+set class = cust_class(purchase);
+insert into Category(name,class) values (cust_name,class);
+end$$
+delimiter;
+
+call proc_Grade('jay',10000);
+select * from Customer;
+select * from Category;
+drop procedure proc_Grade;
+drop function cust_class;
+drop table Customer;
+drop table Category; 

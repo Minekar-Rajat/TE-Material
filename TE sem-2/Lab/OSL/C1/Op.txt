@@ -1,0 +1,220 @@
+
+
+	####### Scheduling Algorithms #######
+
+
+	 1. FCFS
+	 2. SJF
+	 3. Round Robin
+	 4. Priority
+	 0. Exit
+
+	Enter Your Choice	:	1
+
+
+	####### FCFS #######
+
+	Enter number of processes	:	3
+
+	Arrival time of P1		:	0
+
+	Burst time of P1		:	6
+
+	Arrival time of P2		:	4
+
+	Burst time of P2		:	4
+
+	Arrival time of P3		:	3
+
+	Burst time of P3		:	2
+
+
+	******************************************
+	ID	AT	BT	TAT	WT
+	******************************************
+	P1  	 0	6	6	  0
+	P3  	 3	2	5	  3
+	P2  	 4	4	8	  4
+
+	Average turnaround time	:	6.3333335
+
+	Average waiting time	:	2.3333333
+
+	Gantt chart :
+	
+		0--->6	:	P1
+		6--->8	:	P3
+		8--->12	:	P2
+	=======================
+
+
+	 1. FCFS
+	 2. SJF
+	 3. Round Robin
+	 4. Priority
+	 0. Exit
+
+	Enter Your Choice	:	2
+
+
+	####### SJF #######
+
+	Enter number of processes	:	4
+
+	Arrival time of P1	:	0
+
+	Burst time of P1	:	4
+
+	Arrival time of P2	:	2
+
+	Burst time of P2	:	7
+
+	Arrival time of P3	:	3
+
+	Burst time of P3	:	2
+
+	Arrival time of P4	:	3
+
+	Burst time of P4	:	2
+
+
+	******************************************
+	ID	AT	BT	TAT	WT
+	******************************************
+	P1  	 0	4	4	0
+	P2  	 2	7	13	6
+	P3  	 3	2	3	1
+	P4  	 3	2	5	3
+
+	Average turnaround time	:	6.25
+
+	Average waiting time	:	2.5
+
+	Gantt chart :
+	
+		0--->4	:	P1
+		4--->6	:	P3
+		6--->8	:	P4
+		8--->15	:	P2
+	=======================
+
+
+	 1. FCFS
+	 2. SJF
+	 3. Round Robin
+	 4. Priority
+	 0. Exit
+
+	Enter Your Choice	:	3
+
+
+	####### Round Robin (Preemptive) #######
+
+	Enter number of processes	:	3
+
+	Enter the quantum	:	2
+
+	Arrival time of P1	:	1
+
+	Burst time of P1	:	5
+
+	Arrival time of P2	:	0
+
+	Burst time of P2	:	4
+
+	Arrival time of P3	:	2
+
+	Burst time of P3	:	7
+
+
+	******************************************
+	ID	AT	BT	TAT	WT
+	******************************************
+	P2  	 0	4	8	4
+	P1  	 1	5	12	7
+	P3  	 2	7	14	7
+
+	Average turnaround time	:	11.333333
+
+	Average waiting time	:	6.0
+
+	Gantt chart	:	
+	
+		0--->2:P2
+		2--->4:P1
+		4--->6:P3
+		6--->8:P2
+		8--->10:P1
+		10--->12:P3
+		12--->13:P1
+		13--->15:P3
+		15--->16:P3
+	=======================
+
+
+	 1. FCFS
+	 2. SJF
+	 3. Round Robin
+	 4. Priority
+	 0. Exit
+
+	Enter Your Choice	:	4
+
+
+	####### Priority (Non-Preemptive) #######
+
+	Enter number of processes	:	4
+
+	Arrival time of P1	:	0
+
+	Burst time of P1	:	4
+
+	Priority of P1		:	3
+
+	Arrival time of P2	:	1
+
+	Burst time of P2	:	2
+
+	Priority of P2		:	2
+
+	Arrival time of P3	:	2
+
+	Burst time of P3	:	3
+
+	Priority of P3		:	4
+
+	Arrival time of P4	:	4
+
+	Burst time of P4	:	2
+
+	Priority of P4		:	1
+
+
+	******************************************
+	ID	AT	BT	prior	TAT	WT
+	******************************************
+	P1  	 0	4	3	4	0
+	P2  	 1	2	2	7	5
+	P3  	 2	3	4	9	6
+	P4  	 4	2	1	2	0
+
+	Average turnaround time	:	5.5
+
+	Average waiting time	:	2.75
+
+	Gantt chart	:	
+	
+		0--->4:P1
+		4--->6:P4
+		6--->8:P2
+		8--->11:P3
+	=======================
+
+
+	 1. FCFS
+	 2. SJF
+	 3. Round Robin
+	 4. Priority
+	 0. Exit
+
+	Enter Your Choice	:	0

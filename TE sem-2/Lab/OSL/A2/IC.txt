@@ -1,0 +1,6 @@
+START	(AD,1)
+DS	(DL,2)	(C,2)
+ADD	(IS,1)	(31)	(C,1)
+LTORG	(AD,4)	
+MUL	(IS,3)	(32)	(S,1)
+END	(AD,2)
